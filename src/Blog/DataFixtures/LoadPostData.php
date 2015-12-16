@@ -32,7 +32,7 @@ class LoadPostData implements FixtureInterface
                 ->setTitle(sprintf('Blog post number %d', $count))
                 ->setBody('Evil Dead ipsum dolor sit amet et manor dawn voluptate eu ut.')
                 ->setPublicationDate(
-                    new \DateTime(sprintf('-d% days', self::NUMBER_OF_POSTS - $count))
+                    new \DateTime(sprintf('-%d days', self::NUMBER_OF_POSTS - $count))
                 );
             
             $objectManager->persist($post);
